@@ -1,0 +1,25 @@
+<app-ss-navbar></app-ss-navbar>
+<router-outlet />
+<div [ngClass]="showScrollButton ? 'scroll-top-button show' : 'scroll-top-button'" (click)="scrollToTop()" title="Voltar ao topo">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+        <path
+            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+        </path>
+    </svg>
+</div>
+<div *ngIf="isLoading" class="ss-loadding-container">
+    <div class="ss-loadding-back">
+        <div class="ss-loadding">
+            <h1>SALÃO SANTANA</h1>
+        </div>
+        <div class="ss-loadding">
+            <div class="ss-loader-01"></div>
+            <div class="ss-loader-02"></div>
+        </div>
+        <div class="ss-loadding-title">
+            <span>Preparando o site...</span>
+        </div>
+    </div>
+</div>
+<app-ss-footer></app-ss-footer>
+

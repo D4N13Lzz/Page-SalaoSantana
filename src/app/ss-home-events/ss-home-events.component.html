@@ -1,0 +1,33 @@
+<div class="home_events_container">
+    <div class="home_events_back">
+        <div class="home_events_item_container">
+            <div class="home_events_item_title">
+                <h1>Decorações Que já realizamos:</h1>
+            </div>
+            <app-mk-script-draggable class="home_events_item_draggable">
+                <div class="home_events_item" *ngFor="let card of cards">
+                    <div class="home_events_item_image">
+                        <img [src]="card.imageUrl" alt="{{ card.name }}">
+                    </div>
+
+                    <div class="home_events_item_name">
+                        <h1>{{ card.name }}</h1>
+                    </div>
+
+                    <div class="home_events_item_description">
+                        <h1>{{ card.title }}</h1>
+                        <p>{{ card.description }}</p>
+                    </div>
+                </div>
+            </app-mk-script-draggable>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- #292929 -->

@@ -1,0 +1,103 @@
+.not_found_container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0px;
+
+
+    & .not_found_back {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        max-width: 1420px;
+        padding: 0 20px;
+    }
+
+    & .not_found_item {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & .not_found_item_img {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & .not_found_item_img img {
+        width: 230px;
+        height: 230px;
+        object-fit: cover;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-touch-callout: none;
+    }
+
+    & .not_found_item_text {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    & .not_found_item_text h1 {
+        font-family: "Roboto", sans-serif;
+        font-weight: bolder;
+        font-size: 40px;
+        text-align: center;
+        transition: all .5s ease-in-out;
+        color: #000;
+        margin-block: 0;
+    }
+
+    & .not_found_item_text span {
+        width: 100%;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+        color: #545859;
+        margin: 10px 0;
+    }
+
+    & .not_found_item_text button a  {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        background-color: var(--SS_button);
+        border: none;
+        cursor: pointer;
+        padding: 12px 25px;
+        border-radius: 10px;
+        font-size: 13px;
+        color: var(--SS_button_text);
+        text-transform: uppercase;
+        transition: all .5s ease-in-out;
+    }
+
+    & .not_found_item_text button a svg {
+        width: 17px;
+        height: 17px;
+        fill: var(--SS_button_text);
+        vertical-align: bottom;
+    }
+
+    & .not_found_item_text button a:hover {
+        background-color: var(--SS_button_hover);
+    }
+
+
+
+
+
+
+
+}

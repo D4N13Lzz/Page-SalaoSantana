@@ -1,0 +1,31 @@
+<section>
+    <div class="home_carrossel_container" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"
+      (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd()"
+      (mouseup)="onMouseUp()" (mousemove)="onMouseMove($event)">
+      <div class="home_carrossel_slides" [ngStyle]="{'transform': 'translateX(' + (-currentIndex * 100) + '%)'}">
+        <div class="home_carrossel_slide_image" *ngFor="let image of images; let i = index"
+          (mousedown)="onMouseDown($event, i)" (mouseup)="onMouseUp()" (mouseleave)="onMouseLeaveItem(i)">
+          <a class="home_carrossel_href" [href]="image.link" target="_blank">Conferir</a>
+            <img [src]="image.path" alt="{{image.title}}">
+        </div>
+      </div>
+  
+      <span class="home_carrossel_button_prev">
+        <svg (click)="prevSlide()" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"
+          class="rotate-icon">
+          <path
+            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+          </path>
+        </svg>
+      </span>
+      <span class="home_carrossel_button_next">
+        <svg (click)="nextSlide()" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"
+          class="rotate-icon">
+          <path
+            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+          </path>
+        </svg>
+      </span>
+    </div>
+</section>
+  

@@ -1,0 +1,163 @@
+/* SCROLL TOP UP */
+.scroll-top-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out, background-color 0.3s ease;
+    transform: translateY(150px);
+    visibility: hidden;
+}
+
+.scroll-top-button svg {
+    width: 25px;
+    transform: rotate(180deg);
+    user-select: none;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: var(--SS_button);
+    fill: var(--SS_button_text);
+}
+
+.scroll-top-button.show {
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.scroll-top-button:hover {
+    opacity: .8;
+}
+
+/* LOADER */
+.ss-loadding-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--loadding_back);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(10px);
+
+    .ss-loadding-back {
+        display: block;
+    }
+
+    & .ss-loadding-title {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & .ss-loadding-title span {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        animation: fadeInOut 2s ease-in-out infinite alternate;
+        color: var(--loadding_desc);
+    }
+
+
+    & .ss-loadding {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    & .ss-loadding:nth-child(2) {
+        margin: 20px 0;
+    }
+
+    & .ss-loadding h1 {
+        font-family: "Roboto", sans-serif;
+        font-size: 30px;
+        color: var(--navbar_logo);
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: bolder;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-touch-callout: none;
+        text-align: center;
+        transition: all .5s ease-in-out;
+    }
+
+
+    & .ss-loader-01 {
+        border: 5px solid var(--loadding_loader_01);
+        border-radius: 50px;
+    }
+
+    & .ss-loader-02 {
+        border: 5px solid var(--loadding_loader_02);
+        border-radius: 50px;
+    }
+
+    & .ss-loadding .ss-loader-01 {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        border-left-color: transparent;
+        animation: load161 1s linear infinite;
+    }
+
+    & .ss-loadding .ss-loader-02 {
+        width: 20px;
+        height: 20px;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        margin: 7.5px;
+        animation: load2812 1.5s linear infinite;
+    }
+}
+
+/* ANIMS */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes load161 {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load2812 {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}

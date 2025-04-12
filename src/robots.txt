@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: 
+
+Allow: /src/main.js
+Allow: /node_modules/
+Allow: /src/app/
+
+# Sitemaps
+
+Sitemap: https://main--michellequeirozmk.netlify.app/sitemap.xml

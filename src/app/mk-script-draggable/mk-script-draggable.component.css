@@ -1,0 +1,9 @@
+.draggable {
+  display: flex;
+  overflow-x: auto; /* permitir rolagem horizontal */
+  white-space: nowrap; /* impedir que os cartões quebrem a linha */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Adiciona suporte para scroll suave em dispositivos iOS */
+  scroll-behavior: smooth; /* Adiciona suporte para scroll suave em navegadores modernos */
+  overflow: hidden;
+}

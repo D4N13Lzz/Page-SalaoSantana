@@ -1,0 +1,188 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px var(--all-distance);
+}
+
+.home_carrossel_container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 10px 0;
+    max-width: var(--maximum-size);
+
+    & .home_carrossel_slides {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+    & .home_carrossel_slide_image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        flex: 0 0 100%;
+        border-radius: 10px;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+
+    & .home_carrossel_href {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        background-color: var(--SS_button);
+        padding: 10px 25px;
+        border-radius: 10px;
+        color: var(--SS_button_text);
+        text-transform: uppercase;
+        transition: all .5s ease-in-out;
+        top: 7px;
+    }
+
+    & .home_carrossel_href:hover {
+        background-color: var(--SS_button_hover);
+    }
+
+    & .home_carrossel_slide_image img {
+        width: 443px;
+        height: 600px;
+        border-radius: 10px;
+        cursor: grab;
+        object-fit: cover;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+
+    & .home_carrossel_button_prev,
+    & .home_carrossel_button_next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    & .home_carrossel_button_next svg,
+    & .home_carrossel_button_prev svg {
+        width: 15px;
+        height: 15px;
+        fill: var(--carrossel_button_svg);
+        transform: rotate(90deg);
+        background-color: var(--carrossel_button_back);
+        padding: 10px;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    & .home_carrossel_button_next svg:hover,
+    & .home_carrossel_button_prev svg:hover {
+        background-color: var(--carrossel_button_back_hover);
+    }
+
+    & .home_carrossel_button_next svg {
+        transform: rotate(270deg) !important;
+    }
+
+    & .home_carrossel_button_prev {
+        left: 10px;
+    }
+
+    & .home_carrossel_button_next {
+        right: 10px;
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    .home_carrossel_container {
+
+        & .home_carrossel_href {
+            font-size: 12px !important;
+            padding: 10px 25px !important;
+            left: 10px;
+        }
+
+        & .home_carrossel_slide_image img {
+            height: auto !important;
+        }
+
+        & .home_carrossel_button_next svg,
+        & .home_carrossel_button_prev svg {
+            width: 13px !important;
+            height: 13px !important;
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .home_carrossel_container {
+
+        & .home_carrossel_href {
+            font-size: 11px;
+            padding: 7px 25px;
+            left: 10px;
+        }
+
+
+        & .home_carrossel_slide_image img {
+            width: 100% !important;
+            height: 300px !important;
+        }
+
+
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .home_carrossel_container {
+
+        & .home_carrossel_slide_image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        & .home_carrossel_button_next svg,
+        & .home_carrossel_button_prev svg {
+            width: 12px;
+            height: 12px;
+        }
+
+    }
+}
+
+@media only screen and (min-width: 638px) {
+    .home_carrossel_container {
+
+        & .home_carrossel_href {
+            top: 10px;
+        }
+
+        & .home_carrossel_slide_image img {
+            height: auto;
+            object-position: center;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .home_carrossel_container {
+
+        & .home_carrossel_slide_image img {
+            width: 100%;
+        }
+    }
+}

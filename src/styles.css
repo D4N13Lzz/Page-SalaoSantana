@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: var(--color_all);
+}
+
+html {
+    touch-action: manipulation;
+}
+
+button {
+    background: 0;
+    border: none;
+    padding-block: 0;
+    padding-inline: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+p {
+    margin-block: 0;
+    margin-inline: 0;
+}
+
+
+
+/* MODIFICAÇÕES ROOT COMPLETA */
+:root {
+    /* TAMANHO MAXIMO DAS DIVS */
+    --maximum-size: 1420px; 
+    --all-distance: 20px;
+
+    /* ALL */
+    --color_all: #fff;
+    /* buttons todos */
+    --SS_button: #1EA8C4;
+    --SS_button_text: #FFF;
+    --SS_button_hover: #5ad4e4;
+
+    /* LOADDING */
+    --loadding_back: #ebf6ffc4;
+    --loadding_desc: #081b3e;
+    --loadding_loader_01: #1EA8C4;
+    --loadding_loader_02: #081b3e;
+
+    /* NAVBAR */
+    /* TOPO */
+    --navbar_top_back: #1EA8C4;
+    --navbar_top_text: #fff;
+    --navbar_top_svg: #ffe8e8;
+    /* NAV */
+    --navbar_back: #fff;
+    --navbar_back_border: #dddddd;
+    --navbar_logo: #081b3e;
+    --navbar_logo_hover: #5ad4e4;
+    --navbar_itens_svg: #081b3e;
+    --navbar_itens_svg_hover: #888;
+    --navbar_itens_text: #000;
+    /* SIDE */
+    --sidebar_back: #fff;
+    --sidebar_header_back: #5AD4E4;
+    --sidebar_header_text: #000;
+    --sidebar_header_svg: #FFF;
+    --sidebar_header_svg_hover: #5AD4E4;
+    --sidebar_list_border: #5AD4E4;
+    --sidebar_list_text: #000;
+    --sidebar_list_svg: #081b3e;
+    --sidebar_list_hover: #5AD4E4;
+
+
+    /* CARROSSEL ALL */
+    --carrossel_button_back: #1EA8C4;
+    --carrossel_button_back_hover: #5AD4E4;
+    --carrossel_button_svg: #fff;
+    /* CATEGORYS BUTTONS */
+    --category_button_back: #1EA8C4;
+    --category_button_svg: #5AD4E4;
+    --category_button_text1: #fff;
+    --category_button_text2: #ededed;
+
+    /* ESPAÇO ALL */
+    --space_back: #ebf6ff;
+    --space_title: #000;
+    --space_title_svg: #000;
+    --space_desc: #000;
+    
+    /* BENEFICIOS ALL */
+    --benefits_title: #000;
+    --benefits_desc: #000;
+    --benefits_border: #cecece;
+
+    /* SOBRE ALL */
+    --about_back: #ebf6ff;
+    --about_subtitle: #222;
+    --about_title: #000;
+    --about_desc: #545859;
+    --about_border: #cecece;
+
+    /* LOCALIZAÇÃO ALL */
+    --location_title: #000;
+    --location_title_svg: #000;
+    --location_desc: #000;
+    --location_border: #081b3e;
+
+    /* FOOTER ALL */
+    --footer_back: #e1fffb;
+    --footer_list_title: #000;
+    --footer_list_title_svg: #000;
+    --footer_list_border: #cecece6b;
+    --footer_list_text: #545859;
+    --footer_list_text_hover: #adadad;
+    --footer_end_back: #ebf6ff;
+    --footer_end_text: #000;
+    --footer_end_text_hover: #303030;
+    --footer_end_svg: #f00;
+    
+    
+
+    /* CORES PRODUTOS */
+    --product_category_back: #D00070;
+    --product_category_button: #fff;
+    --product_category_button_border: #D00070;
+    --product_category_button_hover: #D00070;
+    --product_category_button_active: #D00070;
+    --product_button: #D00070;
+}
+
+
