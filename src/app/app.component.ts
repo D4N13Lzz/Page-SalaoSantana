@@ -2,9 +2,9 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { SsServiceLoadingService } from './ss-services/ss-service.loading.service';
 
-
 @Component({
   selector: 'app-root',
+  standalone: false,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   showScrollButton: boolean = false;
   isLoading: boolean = false;
 
-  constructor(private SsServiceLoadingService: SsServiceLoadingService) {}
+  constructor(private SsServiceLoadingService: SsServiceLoadingService) { }
 
 
   @HostListener('window:scroll', [])

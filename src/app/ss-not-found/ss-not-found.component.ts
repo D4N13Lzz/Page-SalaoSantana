@@ -3,6 +3,7 @@ import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-ss-not-found',
+  standalone: false,
   templateUrl: './ss-not-found.component.html',
   styleUrls: ['./ss-not-found.component.css']
 })

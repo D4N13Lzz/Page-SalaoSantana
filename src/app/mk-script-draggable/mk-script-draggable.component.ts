@@ -2,6 +2,7 @@ import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-mk-script-draggable',
+  standalone: false,
   templateUrl: './mk-script-draggable.component.html',
   styleUrl: './mk-script-draggable.component.css'
 })

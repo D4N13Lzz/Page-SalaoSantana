@@ -2,23 +2,24 @@ import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-ss-home-carrossel',
+  standalone: false,
   templateUrl: './ss-home-carrossel.component.html',
   styleUrls: ['./ss-home-carrossel.component.css']
 })
 export class SsHomeCarrosselComponent implements OnInit {
   images: any[] = [];
   smallScreenImages: any[] = [
-    { path: '../../assets/Empresa-Inicio/Empresa-Carrossel/mobile-carrossel-01.png', title: 'Imagem 1', link: 'instagram.com' },
-    { path: '../../assets/Empresa-Inicio/Empresa-Carrossel/mobile-carrossel-02.png', title: 'Imagem 2', link: 'facebook.com' },
-    { path: '../../assets/Empresa-Inicio/Empresa-Carrossel/mobile-carrossel-01.png', title: 'Imagem 3', link: 'link_para_imagem_1' },
-    { path: '../../assets/Empresa-Inicio/Empresa-Carrossel/mobile-carrossel-02.png', title: 'Imagem 4', link: 'link_para_imagem_1' },
+    { path: 'Empresa-Inicio/Empresa-Carrossel/mobile-carrossel-01.png', title: 'Imagem 1', link: 'instagram.com' },
+    { path: 'Empresa-Inicio/Empresa-Carrossel/mobile-carrossel-02.png', title: 'Imagem 2', link: 'facebook.com' },
+    { path: 'Empresa-Inicio/Empresa-Carrossel/mobile-carrossel-01.png', title: 'Imagem 3', link: 'link_para_imagem_1' },
+    { path: 'Empresa-Inicio/Empresa-Carrossel/mobile-carrossel-02.png', title: 'Imagem 4', link: 'link_para_imagem_1' },
   ];
 
   largeScreenImages: any[] = [
-    { path: '../../assets/Empresa-Inicio/Empresa-Carrossel/desktop-carrossel-01.png', title: 'Image 1', link: 'instagram.com' },
-    { path: '../../assets/Empresa-Inicio/Empresa-Carrossel/desktop-carrossel-01.png', title: 'Image 2', link: 'facebook.com' },
-    { path: '../../assets/Empresa-Inicio/Empresa-Carrossel/desktop-carrossel-01.png', title: 'Image 3', link: 'link_para_imagem_1' },
-    { path: '../../assets/Empresa-Inicio/Empresa-Carrossel/desktop-carrossel-01.png', title: 'Image 4', link: 'link_para_imagem_1' },
+    { path: 'Empresa-Inicio/Empresa-Carrossel/desktop-carrossel-01.png', title: 'Image 1', link: 'instagram.com' },
+    { path: 'Empresa-Inicio/Empresa-Carrossel/desktop-carrossel-01.png', title: 'Image 2', link: 'facebook.com' },
+    { path: 'Empresa-Inicio/Empresa-Carrossel/desktop-carrossel-01.png', title: 'Image 3', link: 'link_para_imagem_1' },
+    { path: 'Empresa-Inicio/Empresa-Carrossel/desktop-carrossel-01.png', title: 'Image 4', link: 'link_para_imagem_1' },
   ];
 
   currentIndex = 0;

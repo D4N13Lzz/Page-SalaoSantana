@@ -4,6 +4,7 @@ import { SsServiceNavbuttonService } from '../ss-services/ss-service-navbutton.s
 
 @Component({
   selector: 'app-ss-home',
+  standalone: false,
   templateUrl: './ss-home.component.html',
   styleUrl: './ss-home.component.css'
 })

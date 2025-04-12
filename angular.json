@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Site-MichelleQueirozMK": {
+    "Page-SalaoSantana": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/site-michelle-queiroz-mk",
+            "outputPath": "dist/page-salao-santana",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -31,10 +31,10 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/robots.txt",
-              "src/sitemap.xml"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
               "src/styles.css"
@@ -46,13 +46,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "30mb",
-                  "maximumError": "40mb"
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "40mb",
-                  "maximumError": "50mb"
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
                 }
               ],
               "outputHashing": "all"
@@ -69,19 +69,16 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Site-MichelleQueirozMK:build:production"
+              "buildTarget": "Page-SalaoSantana:build:production"
             },
             "development": {
-              "buildTarget": "Site-MichelleQueirozMK:build:development"
+              "buildTarget": "Page-SalaoSantana:build:development"
             }
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "buildTarget": "Site-MichelleQueirozMK:build"
-          }
+          "builder": "@angular-devkit/build-angular:extract-i18n"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -92,10 +89,10 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/robots.txt",
-              "src/sitemap.xml"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
               "src/styles.css"
@@ -107,6 +104,6 @@
     }
   },
   "cli": {
-    "analytics": "01a53e34-71aa-4933-9b32-fdc8da8fce45"
+    "analytics": false
   }
 }
